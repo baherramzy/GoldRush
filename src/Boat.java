@@ -97,7 +97,7 @@ public class Boat implements ActionListener {
 
     public boolean Collision(Mine m) {
         if (right) {
-            if (m.getX() <= x + img_r.getWidth(null) && m.getX() > x) { // BAHER: still not working properly
+            if (m.getX() <= x + img_r.getWidth(null) && m.getX() > x) { 
                 if (m.getY() + m.getRadius() <= y + img_r.getHeight(null) && m.getY() + m.getRadius() > y) {
                     m.delete();
                     return true;
@@ -106,7 +106,7 @@ public class Boat implements ActionListener {
                 return false;
             }
         } else { // left
-            if (m.getX() + m.getRadius() <= x + img_l.getWidth(null) && m.getX() + m.getRadius() > x) { // BAHER: still not working properly
+            if (m.getX() + m.getRadius() <= x + img_l.getWidth(null) && m.getX() + m.getRadius() > x) { 
                 if (m.getY() <= y + img_l.getHeight(null) && m.getY() > y) {
                     m.delete();
                     return true;
